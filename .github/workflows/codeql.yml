@@ -32,6 +32,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - if: matrix.language == 'csharp'
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '5.0.102'
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
