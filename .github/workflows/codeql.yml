@@ -35,7 +35,7 @@ jobs:
     - if: matrix.language == 'csharp'
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0'
+        dotnet-version: '5.0.102'
 
     - if: matrix.language == 'csharp'
       name: Install Cake
