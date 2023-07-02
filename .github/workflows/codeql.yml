@@ -13,7 +13,6 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ${{ (matrix.language == 'csharp' && 'windows-latest') || 'ubuntu-latest' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
       actions: read
       contents: read
@@ -53,7 +52,7 @@ jobs:
       name: Build C#
       run: |
         ./build.ps1 -Target provision
-        ./build.ps1 -Target Build
+        ./build.ps1 -Target BuildForNuget
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
