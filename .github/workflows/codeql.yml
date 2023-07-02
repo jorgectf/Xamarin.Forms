@@ -51,7 +51,7 @@ jobs:
 
     - if: matrix.language == 'csharp'
       name: Build C#
-      run: ./build.ps1 -Target BuildForNuget
+      run: ./build.ps1 -Target BuildTasks
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
